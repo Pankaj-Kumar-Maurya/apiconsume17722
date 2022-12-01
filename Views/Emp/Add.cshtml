@@ -1,0 +1,32 @@
+﻿@model apiconsume17722.Models.Employee
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+@using (Html.BeginForm("Add","Emp",FormMethod.Post))
+{
+<table>
+    @*@Html.HiddenFor(x=>x.rid)*@
+    <tr>
+        <th>Name</th>
+        <td>@Html.TextBoxFor(x => x.name)</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>@Html.TextBoxFor(x => x.address)</td>
+    </tr>
+    <tr>
+        <th>Age</th>
+        <td>@Html.TextBoxFor(x => x.age)</td>
+    </tr>
+    <tr>
+        <th>Salary</th>
+        <td>@Html.TextBoxFor(x => x.salary)</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><input type="submit" value="Save" /></td>
+    </tr>
+</table>
+}
